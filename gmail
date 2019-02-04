@@ -11,7 +11,7 @@ def send_email(subject, to_addr, body_text):
 
     s = smtplib.SMTP("SMTP.gmail.com", 587)
     s.starttls()
-    s.login('', '')  # first is your login, last is for password
+    s.login('', '')  # first is for your login, last is for password
     s.sendmail(from_addr, [to_addr], BODY)
     s.quit()
 
